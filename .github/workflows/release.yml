@@ -110,7 +110,7 @@ jobs:
           ls -lh build-v*.tar.gz
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: build-release
           path: build-v*-cloudflare.tar.gz
@@ -125,7 +125,7 @@ jobs:
           fetch-depth: 0
 
       - name: Download build artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: build-release
           path: ./
